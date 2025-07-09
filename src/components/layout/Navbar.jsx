@@ -19,6 +19,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import {
   Button,
@@ -29,14 +30,7 @@ import { useTheme } from "@mui/material/styles";
 
 import theme from "../../theme";
 import LogoImage from "../../assets/logo.png";
-
-// const NavLink = styled(Link)(({ theme }) => ({
-//   textDecoration: "none",
-//   color: "inherit",
-//   "&:hover": {
-//     color: theme.palette.action.hover,
-//   },
-// }));
+import { useCart } from "../../context/CartContext";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -93,6 +87,7 @@ const StyledInputBase = styled(InputBase)(
 
 export default function Navbar() {
   const theme = useTheme();
+  const { getTotalItems } = useCart(); //ดึงจำนวนสินค้า
 
   const [anchorEl, setAnchorEl] =
     React.useState(null);
@@ -219,6 +214,8 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton> */}
+
+          {/* logo */}
           <Link to="/">
             <img
               src={LogoImage}
@@ -229,6 +226,8 @@ export default function Navbar() {
               }} // ปรับขนาดตามต้องการ
             />
           </Link>
+
+          {/* website name */}
           <Typography
             variant="h6"
             component="div"
@@ -243,6 +242,7 @@ export default function Navbar() {
             tam.fun_heartmade
           </Typography>
 
+          {/* sarch button */}
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -255,6 +255,7 @@ export default function Navbar() {
             />
           </Search>
 
+          {/* other link */}
           <Box
             sx={{
               display: "flex",
@@ -377,6 +378,8 @@ export default function Navbar() {
               About Us
             </Typography>
           </Box>
+
+          {/* Icon => cart and user */}
           <Box
             sx={{
               display: { xs: "none", md: "flex" },
@@ -410,12 +413,14 @@ export default function Navbar() {
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
+              component={Link}
+              to={"/cart"}
             >
               <Badge
-                badgeContent={3}
-                color="error"
+                badgeContent={getTotalItems()}
+                color="secondary"
               >
-                <LocalGroceryStoreIcon />
+                <ShoppingCartIcon />
               </Badge>
             </IconButton>
             <IconButton

@@ -8,6 +8,7 @@ import theme from "./theme"; // นำเข้า theme ที่สร้า�
 import Layout from "./components/layout/Layout";
 import Home from "./pages/home";
 import ProductDetailPage from "./pages/ProductDetailPage";
+import ShoppingCartPage from "./pages/ShoppingCartPage";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/products/:id",
         element: <ProductDetailPage />,
+      },
+      {
+        path: "/cart",
+        element: <ShoppingCartPage />,
       },
     ],
   },

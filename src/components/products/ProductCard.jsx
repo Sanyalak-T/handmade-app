@@ -9,8 +9,11 @@ import {
   Button,
 } from "@mui/material";
 
+import { useCart } from "../../context/CartContext";
+
 function ProductCard({ product }) {
   const id = product.id;
+  const { addToCart } = useCart(); //ใช้ useCart Hook จาก CartContext
   return (
     <Link
       to={`/products/${id}`}
@@ -65,10 +68,11 @@ function ProductCard({ product }) {
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
+              // เพิ่ม logic สำหรับ Add to Cart ตรงนี้
+              addToCart(product);
               console.log(
                 `Added ${product.name} to cart!`
               );
-              // เพิ่ม logic สำหรับ Add to Cart ตรงนี้
             }}
           >
             Add to Cart
