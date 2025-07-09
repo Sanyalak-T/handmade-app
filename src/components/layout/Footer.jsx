@@ -166,7 +166,7 @@ export default function Footer() {
         }}
       >
         {/* Column 1: Logo */}
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid>
           <FooterItem>
             {/* Replace with your actual logo image or component */}
             <Box
@@ -194,7 +194,7 @@ export default function Footer() {
         </Grid>
 
         {/* Column 2: Company Info & Legal */}
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid>
           <FooterItem>
             <Typography variant="h6" gutterBottom>
               Tum.fun_heartmade
@@ -235,7 +235,7 @@ export default function Footer() {
         </Grid>
 
         {/* Column 3: Navigation */}
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid>
           <FooterItem>
             <Typography variant="h6" gutterBottom>
               Explore
@@ -289,7 +289,7 @@ export default function Footer() {
         </Grid>
 
         {/* Column 4: Social Media Icons */}
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid>
           <FooterItem>
             <Typography variant="h6" gutterBottom>
               Social Media

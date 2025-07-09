@@ -7,12 +7,19 @@ import theme from "./theme"; // นำเข้า theme ที่สร้า�
 
 import Layout from "./components/layout/Layout";
 import Home from "./pages/home";
+import ProductDetailPage from "./pages/ProductDetailPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    children: [{ path: "/", element: <Home /> }],
+    children: [
+      { path: "/", element: <Home /> },
+      {
+        path: "/products/:id",
+        element: <ProductDetailPage />,
+      },
+    ],
   },
 ]);
 

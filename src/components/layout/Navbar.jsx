@@ -25,9 +25,18 @@ import {
   ButtonGroup,
   Container,
 } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 import theme from "../../theme";
 import LogoImage from "../../assets/logo.png";
+
+// const NavLink = styled(Link)(({ theme }) => ({
+//   textDecoration: "none",
+//   color: "inherit",
+//   "&:hover": {
+//     color: theme.palette.action.hover,
+//   },
+// }));
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -83,6 +92,8 @@ const StyledInputBase = styled(InputBase)(
 );
 
 export default function Navbar() {
+  const theme = useTheme();
+
   const [anchorEl, setAnchorEl] =
     React.useState(null);
   const [
@@ -243,12 +254,11 @@ export default function Navbar() {
               }}
             />
           </Search>
-          <Box sx={{ flexGrow: 1 }} />
+
           <Box
             sx={{
               display: "flex",
               justifyContent: "center",
-              gap: 3,
               width: { xs: "100%", md: "60%" },
               alignItems: "center",
             }}
@@ -256,70 +266,115 @@ export default function Navbar() {
             <Typography
               variant="h6"
               noWrap
-              component="div"
+              component={Link}
+              to="/items"
               sx={{
+                textDecoration: "none",
+                color: "inherit",
                 display: {
                   xs: "none",
                   sm: "block",
                 },
-                color:
-                  theme.palette.primary
-                    .contrastText,
+                padding: 1,
+                textTransform: "uppercase",
+                "&:hover": {
+                  color:
+                    theme.palette.text.primary,
+                },
               }}
             >
               Items
             </Typography>
+
             <Typography
               variant="h6"
               noWrap
-              component="div"
+              component={Link}
+              to="/items"
               sx={{
+                textDecoration: "none",
+                color: "inherit",
                 display: {
                   xs: "none",
                   sm: "block",
+                },
+                padding: 1,
+                textTransform: "uppercase",
+                "&:hover": {
+                  color:
+                    theme.palette.text.primary,
                 },
               }}
             >
               Wedding Gift
             </Typography>
+
             <Typography
               variant="h6"
               noWrap
-              component="div"
+              component={Link}
+              to="/items"
               sx={{
+                textDecoration: "none",
+                color: "inherit",
                 display: {
                   xs: "none",
                   sm: "block",
+                },
+                padding: 1,
+                textTransform: "uppercase",
+                "&:hover": {
+                  color:
+                    theme.palette.text.primary,
                 },
               }}
             >
               Events
             </Typography>
+
             <Typography
               variant="h6"
               noWrap
-              component="div"
+              component={Link}
+              to="/items"
               sx={{
+                textDecoration: "none",
+                color: "inherit",
                 display: {
                   xs: "none",
                   sm: "block",
                 },
+                padding: 1,
+                textTransform: "uppercase",
+                "&:hover": {
+                  color:
+                    theme.palette.text.primary,
+                },
               }}
             >
-              Workshops
+              WorkShops
             </Typography>
             <Typography
               variant="h6"
               noWrap
-              component="div"
+              component={Link}
+              to="/items"
               sx={{
+                textDecoration: "none",
+                color: "inherit",
                 display: {
                   xs: "none",
                   sm: "block",
                 },
+                padding: 1,
+                textTransform: "uppercase",
+                "&:hover": {
+                  color:
+                    theme.palette.text.primary,
+                },
               }}
             >
-              About
+              About Us
             </Typography>
           </Box>
           <Box
