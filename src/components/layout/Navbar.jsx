@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import {
   styled,
   alpha,
@@ -25,7 +26,8 @@ import {
   Container,
 } from "@mui/material";
 
-import theme from "../theme";
+import theme from "../../theme";
+import LogoImage from "../../assets/logo.png";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -197,7 +199,7 @@ export default function Navbar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             size="large"
             edge="start"
             color="inherit"
@@ -205,20 +207,31 @@ export default function Navbar() {
             sx={{ mr: 2 }}
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
+          <Link to="/">
+            <img
+              src={LogoImage}
+              alt="Your Logo"
+              style={{
+                height: "40px",
+                marginRight: "16px",
+              }} // ปรับขนาดตามต้องการ
+            />
+          </Link>
           <Typography
             variant="h6"
-            noWrap
             component="div"
             sx={{
               display: {
                 xs: "none",
                 sm: "block",
               },
+              mr: 2,
             }}
           >
             tam.fun_heartmade
           </Typography>
+
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -231,6 +244,84 @@ export default function Navbar() {
             />
           </Search>
           <Box sx={{ flexGrow: 1 }} />
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 3,
+              width: { xs: "100%", md: "60%" },
+              alignItems: "center",
+            }}
+          >
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{
+                display: {
+                  xs: "none",
+                  sm: "block",
+                },
+                color:
+                  theme.palette.primary
+                    .contrastText,
+              }}
+            >
+              Items
+            </Typography>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{
+                display: {
+                  xs: "none",
+                  sm: "block",
+                },
+              }}
+            >
+              Wedding Gift
+            </Typography>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{
+                display: {
+                  xs: "none",
+                  sm: "block",
+                },
+              }}
+            >
+              Events
+            </Typography>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{
+                display: {
+                  xs: "none",
+                  sm: "block",
+                },
+              }}
+            >
+              Workshops
+            </Typography>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{
+                display: {
+                  xs: "none",
+                  sm: "block",
+                },
+              }}
+            >
+              About
+            </Typography>
+          </Box>
           <Box
             sx={{
               display: { xs: "none", md: "flex" },
@@ -301,92 +392,6 @@ export default function Navbar() {
             </IconButton>
           </Box>
         </Toolbar>
-        <Container
-          maxWidth="xl"
-          sx={{
-            backgroundColor:
-              theme.palette.primary.light,
-            px: 1,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              width: { xs: "100%", md: "60%" },
-              alignItems: "center",
-            }}
-          >
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{
-                display: {
-                  xs: "none",
-                  sm: "block",
-                },
-              }}
-            >
-              Items
-            </Typography>
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{
-                display: {
-                  xs: "none",
-                  sm: "block",
-                },
-              }}
-            >
-              Wedding Gift
-            </Typography>
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{
-                display: {
-                  xs: "none",
-                  sm: "block",
-                },
-              }}
-            >
-              Events
-            </Typography>
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{
-                display: {
-                  xs: "none",
-                  sm: "block",
-                },
-              }}
-            >
-              Workshops
-            </Typography>
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{
-                display: {
-                  xs: "none",
-                  sm: "block",
-                },
-              }}
-            >
-              About
-            </Typography>
-          </Box>
-        </Container>
       </AppBar>
       {renderMobileMenu}
       {renderMenu}

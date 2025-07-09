@@ -5,12 +5,14 @@ import {
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme"; // นำเข้า theme ที่สร้างขึ้น
 
-import Layout from "./layout/Layout";
+import Layout from "./components/layout/Layout";
+import Home from "./pages/home";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    children: [{ path: "/", element: <Home /> }],
   },
 ]);
 
