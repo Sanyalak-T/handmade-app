@@ -525,7 +525,13 @@ function CheckoutPage() {
                       objectFit: "cover",
                       mr: 1.5,
                     }}
-                    image={item.imageUrl}
+                    // image={item.imageUrl}
+                    image={
+                      item.imageUrls &&
+                      item.imageUrls.length > 0
+                        ? item.imageUrls[0]
+                        : "placeholder_image_url"
+                    }
                     alt={item.name}
                   />
                   <Box sx={{ flexGrow: 1 }}>

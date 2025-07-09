@@ -15,8 +15,6 @@ import {
   Container,
 } from "@mui/material";
 import theme from "../theme";
-// import mainImage from "../assets/handmade.png";
-// import mainImage from "../assets/main-img.jpg";
 import mainImage from "../assets/main-img.webp";
 
 import ProductGridSection from "../components/products/ProductGridSection";

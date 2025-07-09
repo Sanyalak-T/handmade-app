@@ -10,6 +10,7 @@ import Home from "./pages/home";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import ShoppingCartPage from "./pages/ShoppingCartPage";
 import CheckoutPage from "./pages/CheckoutPage";
+import NotFound from "./pages/Notfound";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: "/", element: <Home /> },
+      { path: "*", element: <NotFound /> },
       {
         path: "/products/:id",
         element: <ProductDetailPage />,

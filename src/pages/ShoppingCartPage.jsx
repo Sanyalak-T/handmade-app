@@ -94,7 +94,13 @@ function ShoppingCartPage() {
                   height: 120,
                   objectFit: "cover",
                 }}
-                image={item.imageUrl}
+                // image={item.imageUrl}
+                image={
+                  item.imageUrls &&
+                  item.imageUrls.length > 0
+                    ? item.imageUrls[0]
+                    : "placeholder_image_url"
+                }
                 alt={item.name}
               />
               <Box

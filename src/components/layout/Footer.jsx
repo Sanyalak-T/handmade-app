@@ -320,7 +320,7 @@ export default function Footer() {
               </SocialIconBox>
               <SocialIconBox
                 component={Link}
-                href="https://www.youtube.com/tam.fun_heartmade"
+                href="https://www.youtube.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
@@ -329,16 +329,16 @@ export default function Footer() {
               </SocialIconBox>
               <SocialIconBox
                 component={Link}
-                href="https://discord.gg/yourdiscordlink"
+                href="https://www.pinterest.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Discord"
+                aria-label="Pinterest"
               >
                 <PinterestIcon />
               </SocialIconBox>
               <SocialIconBox
                 component={Link}
-                href="https://www.facebook.com/tam.fun_heartmade"
+                href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"

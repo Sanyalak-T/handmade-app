@@ -36,7 +36,13 @@ function ProductCard({ product }) {
         <CardMedia
           component="img"
           height="200"
-          image={product.imageUrl}
+          // image={product.imageUrl}
+          image={
+            product.imageUrls &&
+            product.imageUrls.length > 0
+              ? product.imageUrls[0]
+              : "placeholder_image_url"
+          }
           alt={product.name}
           sx={{ objectFit: "cover" }}
         />

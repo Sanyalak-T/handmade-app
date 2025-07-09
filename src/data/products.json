@@ -4,41 +4,65 @@
     "name": "Hand knitted bag",
     "price": 850,
     "description": "testing Hand knitted bag",
-    "imageUrl": "/products/image1.jpg"
+    "imageUrls": [
+      "/products/image1.jpg",
+      "/products/image1-b.jpg",
+      "/products/image1-c.jpg"
+    ]
   },
   {
     "id": 2,
     "name": "Lucky stone necklace",
     "price": 490,
     "description": "testing Lucky stone necklace",
-    "imageUrl": "/products/image2.jpg"
+    "imageUrls": [
+      "/products/image2.jpg",
+      "/products/image2-b.jpg",
+      "/products/image2-c.jpg"
+    ]
   },
   {
     "id": 3,
     "name": "Crochet doll",
     "price": 320,
     "description": "testing Crochet doll",
-    "imageUrl": "/products/image3.jpg"
+    "imageUrls": [
+      "/products/image3.jpg",
+      "/products/image3-b.jpg",
+      "/products/image3-c.jpg"
+    ]
   },
   {
     "id": 4,
     "name": "Handmade coasters",
     "price": 150,
     "description": "testing Handmade coasters",
-    "imageUrl": "/products/image4.jpg"
+    "imageUrls": [
+      "/products/image4.jpg",
+      "/products/image4-b.jpg",
+      "/products/image4-c.jpg"
+    ]
   },
   {
     "id": 5,
     "name": "Resin keychain",
     "price": 99,
     "description": "testing Resin keychain",
-    "imageUrl": "/products/image5.jpg"
+    "imageUrls": [
+      "/products/image5.jpg",
+      "/products/image5-b.jpg",
+      "/products/image5-c.jpg"
+    ]
   },
   {
     "id": 6,
     "name": "Handmade notebook",
     "price": 280,
     "description": "testing Handmade notebook",
-    "imageUrl": "/products/image6.jpg"
+    "imageUrls": [
+      "/products/image6.jpg",
+      "/products/image6-b.jpg",
+      "/products/image6-c.jpg"
+    ]
   }
 ]
