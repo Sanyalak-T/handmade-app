@@ -116,6 +116,12 @@ export const CartProvider = ({ children }) => {
     );
   };
 
+  // clear cart
+  const clearCart = () => {
+    setCartItems([]);
+    console.log("clear card");
+  };
+
   // นำค่าแต่ละตัวมารวมเพื่อส่งออกไปใช้งานต่อไป
   const value = {
     cartItems,
@@ -124,6 +130,7 @@ export const CartProvider = ({ children }) => {
     updateQuantity,
     getCartTotal,
     getTotalItems,
+    clearCart,
   };
 
   return (

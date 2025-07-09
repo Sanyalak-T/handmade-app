@@ -129,7 +129,7 @@ const Home = () => {
                 size="large"
                 sx={{
                   backgroundColor:
-                    theme.palette.secondary.main, // Use a secondary color for CTA
+                    theme.palette.secondary.main,
                   "&:hover": {
                     backgroundColor:
                       theme.palette.secondary

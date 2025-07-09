@@ -179,6 +179,7 @@ export default function Footer() {
                 mb: 1,
                 display: "block", // Ensure image behaves like a block element
                 mx: { xs: "auto", md: "0" }, // Center on mobile, left align on desktop
+                borderRadius: "50%",
               }}
             />
             {/* Optional: Tagline or brief description */}
@@ -333,7 +334,6 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label="Discord"
               >
-                {/* Replace with your actual Discord Icon if you have one, or use a general social icon if not */}
                 <PinterestIcon />
               </SocialIconBox>
               <SocialIconBox
@@ -345,10 +345,6 @@ export default function Footer() {
               >
                 <FacebookIcon />
               </SocialIconBox>
-              {/* Removed Pinterest as per your revised request unless you want to re-add it */}
-              {/* <SocialIconBox component={Link} href="https://www.pinterest.com/tam.fun_heartmade" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
-                <PinterestIcon />
-              </SocialIconBox> */}
             </Box>
           </FooterItem>
         </Grid>

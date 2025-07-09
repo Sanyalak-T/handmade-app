@@ -39,7 +39,7 @@ function ShoppingCartPage() {
 
   const handleNextToCheckout = () => {
     // Logic สำหรับไปยังหน้า Checkout
-    navigate("/checkout"); // สมมติว่ามีหน้า /checkout
+    navigate("/checkout");
     console.log("Proceeding to checkout...");
   };
 
@@ -52,14 +52,14 @@ function ShoppingCartPage() {
           variant="h5"
           color="text.secondary"
         >
-          ตะกร้าสินค้าว่างเปล่า
+          No items that you want
         </Typography>
         <Button
           variant="contained"
           sx={{ mt: 3 }}
           onClick={() => navigate("/")}
         >
-          กลับไปเลือกซื้อสินค้า
+          Back to all items
         </Button>
       </Container>
     );
@@ -73,7 +73,7 @@ function ShoppingCartPage() {
         gutterBottom
         align="center"
       >
-        ตะกร้าสินค้าของคุณ
+        Your Cart...
       </Typography>
 
       <Grid container spacing={3}>
@@ -117,9 +117,9 @@ function ShoppingCartPage() {
                     variant="subtitle1"
                     color="text.secondary"
                   >
-                    ราคา:{" "}
+                    Price:{" "}
                     {item.price.toLocaleString()}{" "}
-                    บาท/ชิ้น
+                    Baht / Item
                   </Typography>
                 </CardContent>
                 <CardActions
@@ -176,11 +176,11 @@ function ShoppingCartPage() {
                       variant="body1"
                       sx={{ mr: 2 }}
                     >
-                      รวม:{" "}
+                      Prices:{" "}
                       {(
                         item.price * item.quantity
                       ).toLocaleString()}{" "}
-                      บาท
+                      Baht
                     </Typography>
                     <IconButton
                       aria-label="delete item"
@@ -200,9 +200,12 @@ function ShoppingCartPage() {
 
         {/* สรุปราคา */}
         <Grid>
-          <Card variant="outlined" sx={{ p: 2 }}>
+          <Card
+            variant="outlined"
+            sx={{ p: 4, width: "120%" }}
+          >
             <Typography variant="h6" gutterBottom>
-              สรุปรายการ
+              Order Summary
             </Typography>
             <Divider sx={{ my: 1 }} />
             <Box
@@ -213,10 +216,10 @@ function ShoppingCartPage() {
               }}
             >
               <Typography variant="body1">
-                ราคาสินค้ารวม (Subtotal):
+                SubTotal:
               </Typography>
               <Typography variant="body1">
-                {subtotal.toLocaleString()} บาท
+                {subtotal.toLocaleString()} Baht
               </Typography>
             </Box>
             <Box
@@ -227,12 +230,14 @@ function ShoppingCartPage() {
               }}
             >
               <Typography variant="body1">
-                ส่วนลด ({discountRate * 100}%):
+                Discount (5%):
               </Typography>
               <Typography variant="body1">
                 -{" "}
-                {discountAmount.toLocaleString()}{" "}
-                บาท
+                {discountAmount
+                  .toFixed(2)
+                  .toLocaleString()}{" "}
+                Baht
               </Typography>
             </Box>
             <Box
@@ -243,10 +248,14 @@ function ShoppingCartPage() {
               }}
             >
               <Typography variant="body1">
-                ภาษี ({taxRate * 100}%):
+                Tax (7%):
               </Typography>
               <Typography variant="body1">
-                + {taxAmount.toLocaleString()} บาท
+                +{" "}
+                {taxAmount
+                  .toFixed(2)
+                  .toLocaleString()}{" "}
+                Baht
               </Typography>
             </Box>
             <Divider sx={{ my: 1 }} />
@@ -258,10 +267,11 @@ function ShoppingCartPage() {
               }}
             >
               <Typography variant="h6">
-                ราคาทั้งหมด (Total):
+                Total :
               </Typography>
               <Typography variant="h6">
-                {totalAmount.toLocaleString()} บาท
+                {totalAmount.toLocaleString()}{" "}
+                Baht
               </Typography>
             </Box>
             <Button
@@ -271,7 +281,7 @@ function ShoppingCartPage() {
               size="large"
               onClick={handleNextToCheckout}
             >
-              ดำเนินการชำระเงิน
+              Continues to checkout
             </Button>
           </Card>
         </Grid>

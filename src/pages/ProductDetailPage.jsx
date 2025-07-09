@@ -9,16 +9,19 @@ import {
   CircularProgress,
   Box,
   CardMedia,
+  CardActions,
   Button,
 } from "@mui/material";
 
 import productsData from "../data/products.json";
+import { useCart } from "../context/CartContext";
 
 function ProductDetailPage() {
   const { id } = useParams(); // ดึงค่า id จาก URL
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { addToCart } = useCart(); // ใช้ useCart Hook
 
   useEffect(() => {
     // ในโปรเจกต์จริง คุณจะทำการ fetch ข้อมูลสินค้าจาก API โดยใช้ productId
@@ -106,19 +109,26 @@ function ProductDetailPage() {
             color="primary"
             gutterBottom
           >
-            ราคา: {product.price.toLocaleString()}{" "}
-            บาท
+            price:{" "}
+            {product.price.toLocaleString()} Baht
           </Typography>
           <Typography variant="body1">
             {product.description}
           </Typography>
-          <Button
-            variant="contained"
-            size="large"
-            sx={{ mt: 2 }}
-          >
-            เพิ่มลงตะกร้า
-          </Button>
+          <CardActions>
+            <Button
+              variant="contained"
+              size="large"
+              sx={{ mt: 2 }}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                addToCart(product);
+              }}
+            >
+              Add to Cart
+            </Button>
+          </CardActions>
         </Box>
       </Box>
     </Container>

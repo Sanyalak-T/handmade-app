@@ -223,6 +223,7 @@ export default function Navbar() {
               style={{
                 height: "40px",
                 marginRight: "16px",
+                borderRadius: "50%",
               }} // ปรับขนาดตามต้องการ
             />
           </Link>
@@ -418,7 +419,7 @@ export default function Navbar() {
             >
               <Badge
                 badgeContent={getTotalItems()}
-                color="secondary"
+                color="error"
               >
                 <ShoppingCartIcon />
               </Badge>
