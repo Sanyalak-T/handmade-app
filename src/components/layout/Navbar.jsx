@@ -29,7 +29,7 @@ import {
 import { useTheme } from "@mui/material/styles";
 
 import theme from "../../theme";
-import LogoImage from "../../assets/logo.png";
+import LogoImage from "../../assets/logo1.png";
 import { useCart } from "../../context/CartContext";
 
 const Search = styled("div")(({ theme }) => ({

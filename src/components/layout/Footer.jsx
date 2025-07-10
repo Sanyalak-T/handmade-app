@@ -12,7 +12,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 
 import theme from "../../theme.js";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo1.png";
 
 const FooterItem = styled(Paper)(({ theme }) => ({
   backgroundColor: "transparent", // Make background transparent for cleaner look
