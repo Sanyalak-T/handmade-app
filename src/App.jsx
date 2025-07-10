@@ -10,7 +10,7 @@ import Home from "./pages/home";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import ShoppingCartPage from "./pages/ShoppingCartPage";
 import CheckoutPage from "./pages/CheckoutPage";
-import NotFound from "./pages/Notfound";
+import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 
 const router = createBrowserRouter([
