@@ -9,7 +9,7 @@ import productsData from "../../data/products.json";
 
 function ProductGridSection() {
   const products = productsData;
-  console.log(products);
+  // console.log(products);
   // console.log(products[0].id);
 
   return (

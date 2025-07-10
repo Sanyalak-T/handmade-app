@@ -2,7 +2,7 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import { useParams } from "react-router-dom"; // Import useParams
+import { useParams } from "react-router-dom";
 import {
   Container,
   Typography,
@@ -13,8 +13,8 @@ import {
   Button,
   IconButton,
 } from "@mui/material";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos"; // Icon ลูกศรซ้าย
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"; // Icon ลูกศรขวา
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 import productsData from "../data/products.json";
 import { useCart } from "../context/CartContext";
@@ -135,20 +135,6 @@ function ProductDetailPage() {
           gap: 4,
         }}
       >
-        {/* <Box sx={{ flex: 1 }}>
-          <CardMedia
-            component="img"
-            image={product.imageUrl}
-            alt={product.name}
-            sx={{
-              width: "100%",
-              height: "auto",
-              maxHeight: 500,
-              objectFit: "contain",
-            }}
-          />
-        </Box> */}
-
         {/* --- ส่วนซ้าย: รูปภาพสินค้า --- */}
         <Box
           sx={{
@@ -277,41 +263,6 @@ function ProductDetailPage() {
           )}
         </Box>
 
-        {/* <Box sx={{ flex: 1 }}>
-          <Typography
-            variant="h3"
-            component="h1"
-            gutterBottom
-          >
-            {product.name}
-          </Typography>
-          <Typography
-            variant="h5"
-            color="primary"
-            gutterBottom
-          >
-            price:{" "}
-            {product.price.toLocaleString()} Baht
-          </Typography>
-          <Typography variant="body1">
-            {product.description}
-          </Typography>
-          <CardActions>
-            <Button
-              variant="contained"
-              size="large"
-              sx={{ mt: 2 }}
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                addToCart(product);
-              }}
-            >
-              Add to Cart
-            </Button>
-          </CardActions>
-        </Box> */}
-
         {/* --- ส่วนขวา: รายละเอียดสินค้า --- */}
         <Box sx={{ flex: 1 }}>
           <Typography
@@ -329,7 +280,7 @@ function ProductDetailPage() {
             price:{" "}
             {product.price.toLocaleString()} Baht
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant="body1">
             {" "}
             {/* ใช้ paragraph เพื่อให้มี margin-bottom */}
             {product.description}
@@ -345,7 +296,6 @@ function ProductDetailPage() {
                 e.preventDefault(); // ป้องกันการทำงานเริ่มต้นของ Link
                 e.stopPropagation(); // หยุดการแพร่กระจายของ event
                 addToCart(product);
-                // อาจเพิ่ม Snackbar แจ้งเตือนว่าเพิ่มลงตะกร้าแล้ว
               }}
             >
               Add to Cart

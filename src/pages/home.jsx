@@ -151,6 +151,7 @@ const Home = () => {
           </Box>
         </Container>
       </Box>
+
       {/* // All items */}
       <ProductGridSection />
     </>

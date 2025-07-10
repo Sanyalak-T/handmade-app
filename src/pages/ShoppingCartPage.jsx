@@ -40,7 +40,7 @@ function ShoppingCartPage() {
   const handleNextToCheckout = () => {
     // Logic สำหรับไปยังหน้า Checkout
     navigate("/checkout");
-    console.log("Proceeding to checkout...");
+    // console.log("Proceeding to checkout...");
   };
 
   if (cartItems.length === 0) {

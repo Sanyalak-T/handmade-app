@@ -165,26 +165,19 @@ export default function Navbar() {
       <MenuItem>
         <IconButton
           size="large"
-          aria-label="show 4 new mails"
+          aria-label="show total items"
           color="inherit"
+          component={Link}
+          to={"/cart"}
         >
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
+          <Badge
+            badgeContent={getTotalItems()}
+            color="error"
+          >
+            <ShoppingCartIcon />
           </Badge>
         </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
+        <p>Cart</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -205,16 +198,6 @@ export default function Navbar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          {/* <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton> */}
-
           {/* logo */}
           <Link to="/">
             <img
@@ -285,14 +268,14 @@ export default function Navbar() {
                 },
               }}
             >
-              Items
+              Products
             </Typography>
 
             <Typography
               variant="h6"
               noWrap
               component={Link}
-              to="/items"
+              to="/wedding-gift"
               sx={{
                 textDecoration: "none",
                 color: "inherit",
@@ -315,7 +298,7 @@ export default function Navbar() {
               variant="h6"
               noWrap
               component={Link}
-              to="/items"
+              to="/events"
               sx={{
                 textDecoration: "none",
                 color: "inherit",
@@ -338,7 +321,7 @@ export default function Navbar() {
               variant="h6"
               noWrap
               component={Link}
-              to="/items"
+              to="/workshops"
               sx={{
                 textDecoration: "none",
                 color: "inherit",
@@ -360,7 +343,7 @@ export default function Navbar() {
               variant="h6"
               noWrap
               component={Link}
-              to="/items"
+              to="/about"
               sx={{
                 textDecoration: "none",
                 color: "inherit",
@@ -386,33 +369,9 @@ export default function Navbar() {
               display: { xs: "none", md: "flex" },
             }}
           >
-            {/* <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit"
-            >
-              <Badge
-                badgeContent={4}
-                color="error"
-              >
-                <MailIcon />
-              </Badge>
-            </IconButton>
             <IconButton
               size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge
-                badgeContent={17}
-                color="error"
-              >
-                <NotificationsIcon />
-              </Badge>
-            </IconButton> */}
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
+              aria-label="show total items"
               color="inherit"
               component={Link}
               to={"/cart"}
@@ -459,34 +418,3 @@ export default function Navbar() {
     </Box>
   );
 }
-
-// import React, {
-//   useState,
-//   useEffect,
-// } from "react";
-// import {
-//   Link,
-//   useNavigate,
-// } from "react-router-dom";
-// import { useTheme } from "@mui/material/styles";
-// import {
-//   AppBar,
-//   Toolbar,
-//   Button,
-//   Typography,
-//   Box,
-//   Container,
-//   IconButton,
-// } from "@mui/material";
-// import SearchIcon from "@mui/icons-material/Search";
-// import PersonIcon from "@mui/icons-material/Person";
-
-// const Navbar = () => {
-//   return (
-//     <>
-//       <h1>Navbar!</h1>
-//     </>
-//   );
-// };
-
-// export default Navbar;

@@ -163,8 +163,6 @@ function CheckoutPage() {
   const onSubmit = (data) => {
     console.log("Order Confirmed:", data);
     // alert("Order Confirmed");
-    // ในโปรเจกต์จริง คุณจะส่งข้อมูลนี้ไปยัง Backend เพื่อประมวลผลการสั่งซื้อ
-    // เช่น axios.post('/api/orders', data);
 
     // แสดงข้อความสำเร็จ
     setSnackbarMessage(
@@ -174,7 +172,7 @@ function CheckoutPage() {
     setSnackbarOpen(true);
     console.log("Snackbar should open now");
 
-    // หน่วงเวลา 5 วินาทีก่อนกลับไปหน้า Home
+    // หน่วงเวลา 3 วินาทีก่อนกลับไปหน้า Home
     setTimeout(() => {
       // ล้างตะกร้าสินค้าหลังจากสั่งซื้อสำเร็จ
       clearCart(); // ต้องเพิ่ม clearCart ใน CartContext ด้วย
@@ -630,7 +628,7 @@ function CheckoutPage() {
 
               {/* ปุ่ม Confirm your Order */}
               <Button
-                type="submit" // กำหนด type เป็น submit เพื่อให้ form ทำงาน
+                type="submit"
                 variant="contained"
                 color="primary"
                 fullWidth

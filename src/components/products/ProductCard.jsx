@@ -48,7 +48,6 @@ function ProductCard({ product }) {
         />
         <CardContent sx={{ flexGrow: 1 }}>
           {" "}
-          {/* เพิ่ม flexGrow: 1 ตรงนี้ */}
           <Typography
             gutterBottom
             variant="h6"
@@ -66,7 +65,6 @@ function ProductCard({ product }) {
         </CardContent>
         <CardActions sx={{ marginTop: "auto" }}>
           {" "}
-          {/* เพิ่ม marginTop: 'auto' ตรงนี้ */}
           <Button
             size="small"
             variant="contained"
